@@ -1,6 +1,2 @@
-2023/07/30-17:43:09.736 a903 Reusing MANIFEST /Users/eq33360/Code/whatsapp-delivery-bot/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
-2023/07/30-17:43:09.736 a903 Recovering log #4
-2023/07/30-17:43:09.736 a903 Reusing old log /Users/eq33360/Code/whatsapp-delivery-bot/.wwebjs_auth/session/Default/Local Storage/leveldb/000004.log 
-2023/08/01-20:36:10.531 58b3 Level-0 table #8: started
-2023/08/01-20:36:10.557 58b3 Level-0 table #8: 10038 bytes OK
-2023/08/01-20:36:10.598 58b3 Delete type=0 #4
+2024/10/27-00:32:34.947 8903 Creating DB /Users/asadjobanputra/Code/whatsapp-delivery-bot-1/.wwebjs_auth/session/Default/Local Storage/leveldb since it was missing.
+2024/10/27-00:32:34.981 8903 Reusing MANIFEST /Users/asadjobanputra/Code/whatsapp-delivery-bot-1/.wwebjs_auth/session/Default/Local Storage/leveldb/MANIFEST-000001
