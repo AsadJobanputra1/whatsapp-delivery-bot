@@ -1,3 +1,15 @@
+/**
+ * This file initializes and manages a WhatsApp client using the whatsapp-web.js library.
+ * It reads scheduled messages from a CSV file and sends them at the specified times.
+ * The file also handles WhatsApp client events such as authentication and message reception.
+ * 
+ * Major Functions:
+ * - sendWhatsAppMessage: Sends a message to a specified phone number using the WhatsApp client.
+ * - readCSVFile: Reads a CSV file and returns its contents as an array of objects.
+ * - processCSVFile: Processes the CSV file to schedule messages based on the data.
+ * - scheduleTestMessage: Schedules a test message to verify the scheduler is working correctly.
+ */
+
 const qrcode = require("qrcode-terminal"); //whatsapp utility to establish trust with client
 const moment = require('moment');
 const {
