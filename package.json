@@ -10,9 +10,12 @@
   "author": "Asad Jobanputra",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.3.1",
+    "express": "^4.21.1",
     "fs": "0.0.1-security",
+    "json2csv": "^6.0.0-alpha.2",
     "moment": "^2.29.4",
     "node-schedule": "^2.1.1",
     "puppeteer": "^23.6.0",

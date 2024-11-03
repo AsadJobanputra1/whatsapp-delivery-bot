@@ -17,7 +17,7 @@ See .env file for variable to configure:
 
 
 # Sample Data file
-Create CSV file named info.csv
+Create CSV file named data/info.csv
 
 Example File:
 id,recipient,phonenumber,date,time,message

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule New Message</title>
+</head>
+<body>
+    <h1>Schedule a New Message</h1>
+    <form id="scheduleForm">
+        <label for="recipient">Recipient Name:</label>
+        <input type="text" id="recipient" name="recipient" required><br>
+
+        <label for="phonenumber">Phone Number:</label>
+        <input type="text" id="phonenumber" name="phonenumber" required><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" maxlength="500" required></textarea><br>
+        <span id="charCount">0/500</span><br>
+
+        <label for="date">Date (YYYY-MM-DD):</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="time">Time (HH:MM):</label>
+        <input type="time" id="time" name="time" required><br>
+
+        <button type="submit">Schedule</button>
+    </form>
+
+    <script src="scheduleMessage.js"></script>
+</body>
+</html>
