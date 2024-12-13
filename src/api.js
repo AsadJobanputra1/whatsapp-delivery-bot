@@ -49,6 +49,22 @@ function createApp(whatsAppClientHandler) {
         }
     });
 
+    app.post('/send-message', (req, res) => {
+        const { phonenumber, message } = req.body;
+        
+        // Validate input data
+        if (!phonenumber || !message) {
+            return res.status(400).send('Missing required fields: phonenumber and message');
+        }
+
+        try {
+            whatsAppClientHandler.sendWhatsAppMessage(phonenumber, message);
+            res.send('Message sent successfully');
+        } catch (error) {
+            res.status(500).send('Error sending message');
+        }
+    });
+
     app.put('/scheduled-messages/:id', async (req, res) => {
         const messageId = req.params.id;
         const updatedMessage = req.body;
