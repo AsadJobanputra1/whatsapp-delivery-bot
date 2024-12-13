@@ -22,7 +22,7 @@ async function main() {
         const whatsAppManager = new WhatsAppManager();
         console.log('WhatsApp Manager instance created...');
         
-        await whatsAppManager.initializeClient();
+        // await whatsAppManager.initializeClient();
         console.log('WhatsApp Manager initialized and running in background...');
 
         // Initialize API server

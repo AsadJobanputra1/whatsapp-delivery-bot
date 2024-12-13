@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./index.js"
+    "start": "node ./src/index.js"
   },
   "author": "Asad Jobanputra",
   "license": "ISC",
@@ -23,3 +23,5 @@
     "whatsapp-web.js": "^1.21.0"
   }
 }
+
+brew install gconf libgbm libasound2 atk cairo cups dbus expat fontconfig gcc gconf gdk-pixbuf glib gtk+3 nspr pango libstdc+ x11 xcb xcomposite xcursor xdamage xext xfixes xi xrandr xrend xss xtst ca-certificates fonts-liberation libappindicator nss lsb-release xdg-utils wget

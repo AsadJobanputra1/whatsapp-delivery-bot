@@ -1,3 +1,4 @@
 .aider*
 .wwebjs*
 node_modules
+.env

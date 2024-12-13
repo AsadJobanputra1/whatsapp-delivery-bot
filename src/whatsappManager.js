@@ -42,7 +42,7 @@ class WhatsAppManager {
                 console.info(`whatsapp client is ready! (${new Date()})`);
                 this.whatsAppClient.isReady = true;
                 this.sendWhatsAppMessage(this.MANAGER_PHONE_NUMBER, `Whatsapp Bot has now started\n${new Date()}`);
-                this.processCSVFile();
+                // this.processCSVFile();
                 resolve(true);
             });
 
