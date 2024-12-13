@@ -15,6 +15,13 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 // Initialize WhatsApp manager
-const whatsAppManager = new WhatsAppManager();
+async function main() {
+    const whatsAppManager = new WhatsAppManager();
+    console.log('WhatsApp Manager instance created...');
+    
+    await whatsAppManager.initializeClient();
+    console.log('WhatsApp Manager initialized and running in background...');
+    console.log('Application can continue with other tasks...');
+}
 
-console.log('WhatsApp Manager initialized and running...');
+main().catch(console.error);

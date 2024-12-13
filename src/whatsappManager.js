@@ -31,31 +31,34 @@ class WhatsAppManager {
         this.initializeClient();
     }
 
-    initializeClient() {
-        this.whatsAppClient.on('qr', (qr) => {
-            console.log('QR RECEIVED', qr);
-            qrcode.generate(qr, { small: true });
-        });
+    async initializeClient() {
+        return new Promise((resolve) => {
+            this.whatsAppClient.on('qr', (qr) => {
+                console.log('QR RECEIVED', qr);
+                qrcode.generate(qr, { small: true });
+            });
 
-        this.whatsAppClient.on('ready', () => {
-            console.info(`whatsapp client is ready! (${new Date()})`);
-            this.whatsAppClient.isReady = true;
-            this.sendWhatsAppMessage(this.MANAGER_PHONE_NUMBER, `Whatsapp Bot has now started\n${new Date()}`);
-            this.processCSVFile();
-        });
+            this.whatsAppClient.on('ready', () => {
+                console.info(`whatsapp client is ready! (${new Date()})`);
+                this.whatsAppClient.isReady = true;
+                this.sendWhatsAppMessage(this.MANAGER_PHONE_NUMBER, `Whatsapp Bot has now started\n${new Date()}`);
+                this.processCSVFile();
+                resolve(true);
+            });
 
-        this.whatsAppClient.on("authenticated", () => {
-            console.info(`Authentication complete. (${new Date()})`);
-        });
+            this.whatsAppClient.on("authenticated", () => {
+                console.info(`Authentication complete. (${new Date()})`);
+            });
 
-        this.whatsAppClient.on('message', msg => {
-            if (msg.body == '!ping') {
-                msg.reply('pong');
-            }
-            console.info("message received \n" + msg.body);
-        });
+            this.whatsAppClient.on('message', msg => {
+                if (msg.body == '!ping') {
+                    msg.reply('pong');
+                }
+                console.info("message received \n" + msg.body);
+            });
 
-        this.whatsAppClient.initialize();
+            this.whatsAppClient.initialize();
+        });
     }
 
     sendWhatsAppMessage(_number, _message) {
